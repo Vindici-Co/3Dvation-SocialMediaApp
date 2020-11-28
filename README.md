@@ -5,6 +5,13 @@ This is an educational project. The main idea is to demonstrate how one can buil
 This is a full stack project, the backend end uses Node.js with Express, and a MySql database. The frontend is React, with redux utilized for state management. We also utalize Firebase Cloud Storage to hold images, files, and user avatars. 
 
 ## Features
+
+Make Posts: 
+post your favorite designs and thier files to share with others!
+
+Download Files: 
+See a design you like? Feel free to download and then print it!
+
 Home Page:
 See the designs, and download files from your friends, and those that you follow on the network!
 
@@ -16,6 +23,9 @@ Discover other 3D print designers, follow them, and use their designs!
 
 Top Posts:
 Discover the top designs across the network!
+
+Avatars:
+upload an avatar for your profile!
 
 ## File Structure
 The Repo contains two main directories:
@@ -72,12 +82,37 @@ Client Env contains Firebase Connection Keys that can be found in your Firebase 
 7. REACT_APP_APP_ID = (Firebase App ID) 
 8. REACT_APP_MEASUREMENT_ID =(Firebase measurment ID) 
     
-# Running the Project 
+# Running the Project locally
  ## starting the server
  1. cd inside of /server run command npm run dev 
- 2. wait to see db connected in console. (if this does not appear your ENV keys may be incorrect or if using Auroura check inboud connection rules)
+ 2. wait to see db connected in console. (if this does not appear your ENV keys may be incorrect or if using Auroura check inboud connection rules).  
  
  ## starting the client
  1. In client/src/setupProxy, set the target to be the location of the server (for example if you set server port to 5000, use http://localhost:5000)
- 1. cd into /client and run npm start
+ 1. cd into /client and run npm start.  
+ 
+ # Deploying the Project to the web
+ For this project I will be providing intructions on how to host via heroku. 
+ 1. Make a heroku account: https://www.heroku.com/
+ 2. For detailed intructions on how to perpare a codebase for heroku follow these intructions:  
+ https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment#1-track-your-codebase-in-a-git-repository
+ 
+  ## 1. deploy the server
+  1. cd inside of /server run heroku create
+  2. create Procfile in server root specifying command to start server (https://devcenter.heroku.com/articles/procfile)
+  3. make sure you are on master branch of the project and push to heroku with command git push heroku master 
+  4. navigate to the project console in the heroku
+  5. add sever env vars to heroku under project settings (https://devcenter.heroku.com/articles/config-vars)
+  6. Restart Dynos and check logs to see if db connected
+  
+  ## 1. deploy the client
+  1. cd inside of /client run heroku create
+  2. create Procfile in client root specifying command to start client (https://devcenter.heroku.com/articles/procfile)
+  3. go into client/src/setupProxy and set the target to the heroku url for the server (then push changes to master)
+  4. make sure you are on master branch of the project and push to heroku with command git push heroku master 
+  5. navigate to the project console in the heroku
+  6. add client env vars to heroku under project settings (https://devcenter.heroku.com/articles/config-vars)
+  7. Restart Dynos and check logs to see if frontend connected
+ 
+ 
      
