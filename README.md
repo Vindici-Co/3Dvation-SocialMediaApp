@@ -30,8 +30,12 @@ The Repo contains two main directories:
 3. Cd into client folder and npm install
 4. Cd back into server
 
-## Getting Started
+## Firebase Initialization
 Now that the project is installed with dependencies...
+1. Create a Firebase Project for this app by following these instructions:
+https://firebase.google.com/docs/storage/web/start
+
+## Database Initialization  
 1. Download your preferred solution stack for hosting local Sql Servers (MAMP, WAMP, XAMPP).     
 **OR**    
 2. Setup an Amazon Auroura SQL db for use in the app
@@ -47,6 +51,7 @@ https://stackabuse.com/using-aws-rds-with-node-js-and-express-js/
 
 ## Next create an environment file named .env in the root directort of the client and server folders
 *note: all Amazon Auroura info can be found under instance dashboard*
+*note: all firebse info can be found under project settings*
 
 Server Env file should contain:
 1. RDS_HOSTNAME = (Amazon Auroura RDS hostname **or** localhost if running on your machine)
@@ -54,6 +59,7 @@ Server Env file should contain:
 3. RDS_DB_NAME = (name of database)
 4 .RDS_USERNAME =(Amazon Auroura username **or** username for sql server)
 5. RDS_PASSWORD = (Amazon Auroura password **or** password for sql server)
+6. PORT = (port for backend to run on)
 
 Client Env contains Firebase Connection Keys that can be found in your Firebase Project Settings:
 *- do not change ENV names React requires env names to start with REACT_APP_ -*
@@ -67,6 +73,11 @@ Client Env contains Firebase Connection Keys that can be found in your Firebase 
 8. REACT_APP_MEASUREMENT_ID =(Firebase measurment ID) 
     
 ## Running the Project 
-1. inside of /server run command npm run dev 
-2. frontend will start on localhost:3000 and Backend will start on localhost:5000
+ # starting the server
+ 1. cd inside of /server run command npm run dev 
+ 2. wait to see db connected in console. (if this does not appear your ENV keys may be incorrect or if using Auroura check inboud connection rules)
+ 
+ # starting the client
+ 1. In client/src/setupProxy, set the target to be the location of the server (for example if you set server port to 5000, use http://localhost:5000)
+ 1. cd into /client and run npm start
      
