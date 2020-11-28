@@ -33,24 +33,27 @@ The Repo contains two main directories:
 ## Getting Started
 Now that the project is installed with dependencies...
 1. Download your preferred solution stack for hosting local Sql Servers (MAMP, WAMP, XAMPP).     
-**OR**.   
+**OR**    
 2. Setup an Amazon Auroura SQL db for use in the app
 
 ## Amazon Auroura Instructions
+1. Follow this article instructions to setup, inititalize, and then configue Auroura to allow inbound connections.  
+https://stackabuse.com/using-aws-rds-with-node-js-and-express-js/
 
 ## Local SQL Server Instructions
 1. Start your solution stack, and navigate to localhost/phpmyadmin and log in 
 2. Use MySql Workbench or command line to create a table with the included DB_Creator SQL file. 
 
 
-## Create an environment file named .env in the root directort of the client and server folders
+## Next create an environment file named .env in the root directort of the client and server folders
+*note: all Amazon Auroura info can be found under instance dashboard*
 
 Server Env file should contain:
 1. RDS_HOSTNAME = (Amazon Auroura RDS hostname **or** localhost if running on your machine)
-2. RDS_PORT = (port for sql server)
+2. RDS_PORT = (Amazon Auroura port **or** local sql port: 3306)
 3. RDS_DB_NAME = (name of database)
-4 .RDS_USERNAME =(username for sql server)
-5. RDS_PASSWORD = (password for sql server)
+4 .RDS_USERNAME =(Amazon Auroura username **or** username for sql server)
+5. RDS_PASSWORD = (Amazon Auroura password **or** password for sql server)
 
 Client Env contains Firebase Connection Keys that can be found in your Firebase Project Settings:
 *- do not change ENV names React requires env names to start with REACT_APP_ -*
