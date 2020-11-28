@@ -72,12 +72,12 @@ Client Env contains Firebase Connection Keys that can be found in your Firebase 
 7. REACT_APP_APP_ID = (Firebase App ID) 
 8. REACT_APP_MEASUREMENT_ID =(Firebase measurment ID) 
     
-## Running the Project 
- # starting the server
+# Running the Project 
+ ## starting the server
  1. cd inside of /server run command npm run dev 
  2. wait to see db connected in console. (if this does not appear your ENV keys may be incorrect or if using Auroura check inboud connection rules)
  
- # starting the client
+ ## starting the client
  1. In client/src/setupProxy, set the target to be the location of the server (for example if you set server port to 5000, use http://localhost:5000)
  1. cd into /client and run npm start
      
