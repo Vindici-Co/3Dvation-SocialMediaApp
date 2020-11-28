@@ -105,7 +105,7 @@ Client Env contains Firebase Connection Keys that can be found in your Firebase 
   5. add sever env vars to heroku under project settings (https://devcenter.heroku.com/articles/config-vars)
   6. Restart Dynos and check logs to see if db connected
   
-  ## 1. deploy the client
+  ## 2. deploy the client
   1. cd inside of /client run heroku create
   2. create Procfile in client root specifying command to start client (https://devcenter.heroku.com/articles/procfile)
   3. go into client/src/setupProxy and set the target to the heroku url for the server (then push changes to master)
