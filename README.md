@@ -35,7 +35,7 @@ Now that the project is installed with dependencies...
 1. Create a Firebase Project for this app by following these instructions:
 https://firebase.google.com/docs/storage/web/start
 
-## Database Initialization  
+# Database Initialization  
 1. Download your preferred solution stack for hosting local Sql Servers (MAMP, WAMP, XAMPP).     
 **OR**    
 2. Setup an Amazon Auroura SQL db for use in the app
