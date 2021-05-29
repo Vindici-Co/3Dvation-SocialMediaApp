@@ -1,0 +1,3 @@
+name: aws_infra
+runtime: nodejs
+description: Pulimi-based deployment with staging + production environments (EC2)
