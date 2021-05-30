@@ -49,6 +49,14 @@ const securityGroup = new aws.ec2.SecurityGroup("3dvation-grp", {
       toPort: 22,
       cidrBlocks: ["0.0.0.0/0"],
     },
+    {
+      description:
+        "Allow for cloning of GitHub repositories",
+      protocol: "tcp",
+      fromPort: 443,
+      toPort: 443,
+      cidrBlocks: ["0.0.0.0/0"],
+    },
   ],
   tags: {
     Name: "3dvation_sec_grp",
