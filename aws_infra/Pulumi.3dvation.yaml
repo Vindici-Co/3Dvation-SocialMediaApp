@@ -1,0 +1,3 @@
+config:
+  aws:region: us-east-1
+  aws_infra:keyName: vindici-3d
